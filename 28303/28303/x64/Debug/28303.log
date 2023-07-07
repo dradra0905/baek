@@ -1,0 +1,5 @@
+﻿  source.c
+C:\Users\rnjsa\OneDrive\바탕 화면\baek\28303\28303\source.c(12,2): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\rnjsa\OneDrive\바탕 화면\baek\28303\28303\source.c(14,3): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\rnjsa\OneDrive\바탕 화면\baek\28303\28303\source.c(19,26): warning C4244: '초기화 중': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  28303.vcxproj -> C:\Users\rnjsa\OneDrive\바탕 화면\baek\28303\x64\Debug\28303.exe
