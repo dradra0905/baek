@@ -1,0 +1,64 @@
+#include<stdio.h>
+#include<string.h>
+
+char stack[101] = "";
+int top = -1;
+
+void push(char c) {
+   stack[++top] = c;
+}
+
+char pop() {
+   return stack[top--];
+}
+
+
+int main() {
+   char s[31];
+   scanf("%[^\n]", s);
+   int ans = 0;
+   for (int i = 0; i < strlen(s); i++) {
+      if (s[i] == '(' || s[i] == '[') {
+         if (s[i + 1] == '(' || s[i + 1] == '[')push('(');
+      }
+      else {
+         if (s[i] == ')') {
+            if (s[i + 1] == '(' || s[i + 1] == '[') {
+               push('2');
+               push('+');
+            }
+            else if (s[i + 1] == ')' || s[i + 1] == ']') {
+               push('2');
+               push(')');
+               push('*');
+            }
+            else {
+               push('2');
+            }
+         }
+         else if (s[i] == ']') {
+            if (s[i + 1] == '(' || s[i + 1] == '[') {
+               push('3');
+               push('+');
+            }
+            else if (s[i + 1] == ')' || s[i + 1] == ']') {
+               push('3');
+               push(')');
+               push('*');
+            }
+            else {
+               push('3');
+            }
+         }
+      }
+   }
+
+   char cst[101] = "";
+   strcpy(cst, stack);
+
+   for (int i = 0; i < strlen(cst); i++) {
+      printf("%c", cst[i]);
+   }
+
+   return 0;
+}
