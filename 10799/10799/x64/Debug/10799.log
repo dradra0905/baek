@@ -1,0 +1,3 @@
+﻿  source.c
+C:\Users\rnjsa\OneDrive\바탕 화면\baek\10799\10799\source.c(19,2): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  10799.vcxproj -> C:\Users\rnjsa\OneDrive\바탕 화면\baek\10799\x64\Debug\10799.exe
