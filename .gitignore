@@ -1,3 +1,7 @@
 unsolved/
-*/
-/*.c
+*.vcxproj
+*.filters
+*.user
+x64/
+*.sln
+.vs/
