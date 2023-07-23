@@ -54,17 +54,5 @@ int main() {
 	postorderTraversal(t[0]);
 	printf("\n");
 
-
-
-	//for (int i = 0; i < n; i++) {
-	//	printf("%c ", t[i]->v);
-	//	if (t[i]->left)printf("%c ", t[i]->left->v);
-	//	else printf("  ");
-	//	if (t[i]->right)printf("%c", t[i]->right->v);
-	//	printf("\n");
-	//}
-
-
-
 	return 0;
 }
