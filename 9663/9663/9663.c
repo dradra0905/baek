@@ -10,7 +10,7 @@ void queen(int m) {
 	}
 
 	for (int i = 0; i < n; i++) {
-		if (y[i] || xpy[m + i] || xmy[m-i+n-1])continue;
+		if (y[i] || xpy[m + i] || xmy[m - i + n - 1])continue;
 		y[i] = xpy[m + i] = xmy[m - i + n - 1] = 1;
 		queen(m + 1);
 		y[i] = xpy[m + i] = xmy[m - i + n - 1] = 0;
