@@ -5,3 +5,6 @@ unsolved/
 x64/
 *.sln
 .vs/
+*.bin
+*.cph
+.gitignore
