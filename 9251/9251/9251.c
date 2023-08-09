@@ -18,20 +18,24 @@ int main() {
 	len1 = strlen(str1), len2 = strlen(str2);
 	for (int i = 0; i < len1; i++) {
 		for (int j = 0; j < len2; j++) {
-			if (i == 0 || j == 0) {
-				if (str1[i] == str2[j])mtx[i][j] = 1;
-				else {
-					if (i == 0)mtx[i][j] = mtx[i][j - 1];
-					else if (j == 0)mtx[i][j] = mtx[i - 1][j];
-				}
+			if (str1[i] == str2[j]) {
+				if (i == 0 || j == 0)mtx[i][j] = 0;
+				else if(!mtx[i][j])mtx[i][j] = max(mtx[i][j - 1], mtx[i - 1][j]);
+
+				mtx[i + 1][j + 1] = mtx[i][j] + 1;
 			}
 			else {
-				if (str1[i] == str2[j])mtx[i][j] = mtx[i - 1][j - 1] + 1;
-				else mtx[i][j] = max(mtx[i - 1][j], mtx[i][j - 1]);
+				if (i == 0)mtx[i][j] = mtx[i][j - 1];
+				else if (j == 0)mtx[i][j] = mtx[i - 1][j];
+				else if(!mtx[i][j])mtx[i][j] = max(mtx[i][j - 1], mtx[i - 1][j]);
 			}
+
 			mx = max(mx, mtx[i][j]);
 		}
 	}
+
+	for (int i = 0; i <= len1; i++)mx = max(mx, mtx[i][len2]);
+	for (int i = 0; i <= len2; i++)mx = max(mx, mtx[len1][i]);
 
 	printf("%d\n", mx);
 
